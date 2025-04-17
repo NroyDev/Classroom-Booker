@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+html{
+    height: 100vh;
+    width: 100vw;
+}
+
+body{
+    background: url("../img/login_bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /*將子元素上下左右水平置中*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes loadin{
+    from{
+        transform: scale(0,0);
+    }
+    to {
+        transform: scale(100%,100%);
+    }
+}
+
+.login_container{
+    width: 400px;
+    padding: 15px;
+    padding-bottom: 45px;
+
+    /*背景模糊效果*/
+    background-color: transparent;
+    /* border: 2px solid rgba(255,255,255,.2); */
+    box-shadow:  0 0 20px #000;
+    backdrop-filter: blur(15px);
+    box-shadow: #fff;
+    /*圓角*/
+    border-radius: 20px;
+
+    /*動畫*/
+    animation-name: loadin;
+    animation-duration: 0.5s;
+}
+
+/*input box*/
+.login_container input{
+    width: 90%;
+    height: 48px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    padding-left: 15px;
+
+    outline: none;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 25px;
+    
+    /*滑鼠在上面停留的顏色*/
+    caret-color: #ffffff86
+}
+.login_container input::placeholder{
+    color: #fff;
+}
+.login_container input:focus{
+    background-color: rgb(255,255,255,.05);
+}
+.login_container input:focus::placeholder{
+    color: #ffffff86;
+}
+/*Button*/
+#loginButton{
+    width: 90%;
+    height: 50px;
+    margin-left: 5%;
+    border: none;
+    outline: none;
+    background-color: #85c2ff;
+    border-radius: 5px;
+    color: #000;
+}
+#loginButton:hover {
+    transform: scale(1.01);
+    cursor: grab;
+}
+#loginButton:active {
+        /*滑鼠點擊*/
+        transform: scale(1);
+        box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
+        cursor: grabbing;
+    }
+
+/*image*/
+.login_container img{
+    position: absolute;
+    left: 132px;
+    top: -95px;
+    padding: 0;
+    margin: 0;
+    border-radius: 100px;
+    box-shadow: 0 0 20px #000;
+}
+/*p a*/
+.login_container p,a{
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#ServerMSGLabel {
+    font-size: 12px;
+    color: red;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,210,210,.8);
+}
+
+#login_title{
+    text-align: center;
+    font-size: 32px;
+}

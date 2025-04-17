@@ -1,0 +1,59 @@
+﻿.gridview {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+    .gridview th, .gridview td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    .gridview th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    .gridview tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+/* 分頁器的樣式 */
+.pager {
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .pager a, .pager span {
+        margin: 0 5px;
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+        .pager a:hover {
+            background-color: #45a049;
+        }
+
+    /* 當前頁面的樣式 */
+    .pager span {
+        background-color: #ddd;
+        color: #666;
+        cursor: default;
+    }
+
+    .pager .first, .pager .last {
+        padding: 5px 12px;
+    }
+
+.pager-info {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #333;
+}
